@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "ncmec-sdk"
+version = "0.1.0"
+description = "Unofficial Python SDK for the NCMEC Poster API"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["ncmec", "missing children", "api", "sdk"]
+dependencies = [
+    "requests>=2.32.5",
+    "dacite>=1.9.2",
+    "python-dotenv>=1.2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-mock>=3.15.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ncmec-sdk"
+Issues = "https://github.com/yourusername/ncmec-sdk/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ncmec_sdk*"]
